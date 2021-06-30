@@ -1,0 +1,196 @@
+@import url("https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap");
+
+:root {
+  --blue: #3ea1db;
+  --blue-dark: #574ae8;
+  --white: #fff;
+
+  --title: #313131;
+  --text: #a8a8b3;
+  --background: #f3f5f7;
+
+  --linear: linear-gradient(90deg, #574ae8 0%, #3ea1db 100%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+  text-decoration: none;
+  list-style: none;
+}
+
+body {
+  background: var(--background);
+}
+
+a {
+  color: var(--white);
+}
+
+.active {
+  text-decoration: underline;
+  color: var(--background);
+}
+
+/* Header */
+
+header {
+  width: 100%;
+  background: var(--linear);
+  position: relative;
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.navbar {
+  margin-top: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-family: "Lexend Deca";
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+}
+
+.menu a {
+  font-size: 1.25rem;
+  line-height: calc(1.25rem * 1.5);
+}
+
+#search-bar {
+  margin: 3rem 0 2rem 0;
+  padding: 1rem 3.5rem;
+  border: none;
+  border-radius: 0.25rem;
+  background-color: rgba(255, 255, 255, 0.2);
+  background-image: url(/assets/search.svg);
+  background-repeat: no-repeat;
+  background-position: 1rem;
+  outline: none;
+  color: var(--white);
+}
+
+#search-bar::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+/* Main */
+
+main {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+main article:first-child {
+  margin-top: 4rem;
+}
+
+article {
+  width: 100%;
+  height: auto;
+  margin: 2rem 0;
+  padding: 1.5rem;
+  border-radius: 0.25rem;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
+  background: var(--white);
+}
+
+.div {
+  display: flex;
+  justify-content: space-between;
+}
+
+.div i {
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: var(--blue-dark);
+}
+
+.date {
+  font-size: 0.9rem;
+  font-weight: 500;
+  line-height: calc(0.9rem * 1.5);
+  color: var(--text);
+}
+
+.title {
+  margin: 1rem 0;
+  font-size: 1.5rem;
+  font-weight: normal;
+  line-height: calc(1.5rem * 1.5);
+  font-family: "Lexend Deca";
+  color: var(--title);
+}
+
+.description {
+  font-size: 1rem;
+  line-height: calc(1rem * 1.5);
+  color: var(--text);
+}
+
+.tag-container {
+  margin-top: 1rem;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: calc(1rem * 1.5);
+  color: var(--title);
+}
+
+.tag-container a {
+  margin-left: 0.5rem;
+  font-size: 0.9rem;
+  line-height: calc(0.9rem * 1.5);
+  font-weight: normal;
+  color: var(--text);
+}
+
+.tag-container a:hover {
+  text-decoration: underline;
+  color: var(--blue-dark);
+}
+
+/* Responsive */
+
+@media (max-width: 1024px) {
+  .container,
+  main {
+    max-width: 80%;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 426px) {
+  .tag-container {
+    display: none;
+  }
+}
+
+/* JS */
+
+.js [data-anime] {
+  opacity: 0;
+}
+
+.js .anime {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+  transition: opacity 800ms, transform 800ms;
+}
