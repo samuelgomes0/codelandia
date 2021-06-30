@@ -4,7 +4,7 @@
 </p>
 
 ## Sobre   
-Este projeto foi desenvolvido para o primeiro desafio da comunidade **[Codelândia](https://discord.com/invite/QevDJqCzaY)**. O objetivo dele era **praticar Front-end** desenvolvendo um simples blog de notícias **semântico** e **responsivo**.
+Este projeto foi desenvolvido para o primeiro desafio da comunidade **[Codelândia](https://discord.com/invite/QevDJqCzaY)**. O objetivo dele era **praticar Front-end** desenvolvendo um simples blog de notícias **semântico** e **responsivo**. Também foi implementado uma pequena **animação de curtida** e um **sistema de busca de notícia** pelo nome na barra de pesquisa.
 
 ---
 
@@ -43,7 +43,7 @@ cd codelandia
 
 ## Licença
 
-O projeto está sob a licença MIT. Para saber mais, acesse o arquivo [LICENSE](https://github.com/Saesel/arlene-esquivel/blob/main/LICENSE).
+O projeto está sob a licença MIT. Para saber mais, acesse o arquivo [LICENSE](https://github.com/Saesel/codelandia/blob/main/LICENSE).
 
 ---
 
