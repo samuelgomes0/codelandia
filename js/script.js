@@ -21,16 +21,20 @@ if (window.SimpleAnime) {
 }
 
 // Search
-const titles = document.querySelectorAll(".title");
-const searchBar = document.getElementById("search-bar");
+const input = document.getElementById("search-bar");
 const articles = document.querySelectorAll("article");
+const titles = document.querySelectorAll(".title");
 const tags = document.querySelectorAll(".tag");
 
-searchBar.addEventListener("keyup", () => {
-  const searchValue = searchBar.value;
-  for (let i = 0; i < articles.length; i++) {
-    let titleContent = titles[i].innerText;
-    let corresponde = titleContent.toLowerCase().indexOf(searchValue) >= 0;
-    articles[i].style.display = corresponde ? "" : "none";
-  }
-});
+function search() {
+  input.addEventListener("keyup", () => {
+    const value = input.value.toLowerCase();
+
+    for (let i = 0; i < articles.length; i++) {
+      const title = titles[i].innerText.toLowerCase();
+      let corresponde = title.toLowerCase().indexOf(value) >= 0;
+      articles[i].style.display = corresponde ? "" : "none";
+    }
+  });
+}
+search();
